@@ -13,7 +13,7 @@ app.use('/v1/joke', routes);
 
 mongoose.connect(url)
 .then(() => {
-  app.listen(port, () => {
+  app.listen(process.env.PORT || port, () => {
     console.log(`Your app is running at http://localhost:${port}`);
   });
 })
